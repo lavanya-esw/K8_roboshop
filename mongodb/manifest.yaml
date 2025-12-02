@@ -24,6 +24,7 @@ spec:
       containers:
         - name: mongodb
           image: lavanyaesw/mongodb:v1
+          iamgePullPolicy: Always
           readinessProbe:
             tcpSocket:
               port: 27017
