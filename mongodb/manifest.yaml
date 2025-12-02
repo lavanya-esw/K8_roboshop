@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
         - name: mongodb
-          image: lavanyaesw/momgodb:v1
+          image: lavanyaesw/mongodb:v1
           readinessProbe:
             tcpSocket:
               port: 27017
