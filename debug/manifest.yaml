@@ -3,7 +3,7 @@ kind: Pod
 metadata: 
   name: debug
   namespace: roboshop
-  lables:
+  labels:
     project: roboshop
 spec:
   containers:
