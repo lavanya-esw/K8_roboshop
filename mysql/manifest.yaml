@@ -35,14 +35,6 @@ spec:
         - name: mysql
           image: lavanyaesw/mysql:v1
           imagePullPolicy: Always
-          volumeMounts:
-            - name: mysql-config
-              mountPath: /etc/mysql/conf.d/my.cnf
-              subPath: my.cnf
-      volumes:
-        - name: mysql-config
-          configMap:
-            name: mysql
           # readinessProbe:
           #   tcpSocket:
           #     port: 3306
@@ -53,20 +45,29 @@ spec:
           #     port: 3306
           #   initialDelaySeconds: 10
           #   periodSeconds: 10
+          volumeMounts:
+          - name: mysql-config
+            mountPath: /etc/mysql/conf.d/my.cnf
+            subPath: my.cnf
+
+      volumes:
+        - name: mysql-config
+          configMap:
+            name: mysql
 ---
 apiVersion: v1
 kind: Service
-metadata: 
+metadata:
   name: mysql
   namespace: roboshop
 spec:
   selector:
     project: roboshop
-    componeet: mysql
+    component: mysql
     tier: db
   ports:
     - protocol: TCP
-      port: 3306
-      targetPort: 3306
+      port: 3306 # service port
+      targetPort: 3306 # container port
 
       
