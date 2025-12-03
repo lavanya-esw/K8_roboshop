@@ -22,7 +22,7 @@ metadata:
 spec:
   replicas: 1
   selector:
-    matachLabels: 
+    matchLabels: 
       project: roboshop
       componeet: mysql
       tier: db
