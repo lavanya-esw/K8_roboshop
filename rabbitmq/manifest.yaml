@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: rabbitmq
   namespace: roboshop
-  lables:
+  labels:
     project: roboshop
     component: rabbitmq
     tier: db
