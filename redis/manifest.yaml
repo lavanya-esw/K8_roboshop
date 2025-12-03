@@ -5,7 +5,7 @@ metadata:
   namespace: roboshop
   lables: 
     project: roboshop
-    componeet: redis
+    component: redis
     tier: db
 spec:
   replicas: 1
@@ -18,7 +18,7 @@ spec:
     metadata:
       labels:
         project: roboshop
-        componeet: redis
+        component: redis
         tier: db
     spec:
       containers:
@@ -45,7 +45,7 @@ spec:
   selector:
     labels:
       project: roboshop
-      componeet: redis
+      component: redis
       tier: db
     ports:
       - protocol: TCP
