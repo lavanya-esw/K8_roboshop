@@ -13,14 +13,14 @@ kind: Deployment
 metadata:
   name: user
   namespace: roboshop
-  lables:
+  labels:
     project: roboshop
     component: user
     tier: backend
 spec:
   replicas: 1
   selector:
-    matachLabels:
+    matchLabels:
       project: roboshop
       component: user
       tier: backend
