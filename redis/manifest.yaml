@@ -3,7 +3,7 @@ kind: Deployment
 metadata: 
   name: redis  
   namespace: roboshop
-  lables: 
+  labels: 
     project: roboshop
     component: redis
     tier: db
