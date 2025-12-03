@@ -30,29 +30,29 @@ spec:
           project: roboshop
           component: user
           tier: backend
-    spec:
-      containers:
-        - name: user
-          image: lavanyaesw/user:v1
-          imagePullPolicy: Always
-          envFrom:
-            configMapRef:
-              name: user
-          ports:
-          - name: liveness-port
-            containerPort: 8080
-          readinessProbe:
-            httpGet:
-              path: /health
-              port: liveness-port
-            failureThreshold: 1
-            periodSeconds: 15
-          livenessProbe:
-            httpGet:
-              path: /health
-              port: liveness-port
-            failureThreshold: 1
-            periodSeconds: 15
+      spec:
+        containers:
+          - name: user
+            image: lavanyaesw/user:v1
+            imagePullPolicy: Always
+            envFrom:
+              configMapRef:
+                name: user
+            ports:
+            - name: liveness-port
+              containerPort: 8080
+            readinessProbe:
+              httpGet:
+                path: /health
+                port: liveness-port
+              failureThreshold: 1
+              periodSeconds: 15
+            livenessProbe:
+              httpGet:
+                path: /health
+                port: liveness-port
+              failureThreshold: 1
+              periodSeconds: 15
 ---
 
 apiVersion: v1
