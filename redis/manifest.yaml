@@ -46,8 +46,8 @@ spec:
     project: roboshop
     component: redis
     tier: db
-    ports:
-      - protocol: TCP
-        port: 6379
-        targetPort: 6379
+  ports:
+    - protocol: TCP
+      port: 6379
+      targetPort: 6379
 
