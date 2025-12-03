@@ -12,7 +12,7 @@ spec:
   selector:
     matachLabels:
       project: roboshop
-      componeet: redis
+      component: redis
       tier: db
   template:
     metadata:
